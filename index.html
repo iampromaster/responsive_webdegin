@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Responsive Website</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="left-col">
+      <img src="img/logo.png" class="logo" alt="">
+      <div class="content">
+        <h1>xxxxxxxxxxx</h1>
+        <p>yyyyyyyyyyyyyyyyyyy</p>
+        <button type="button">LEARN MORE</button>
+      </div>
+    </div>
+    <div class="right-col">
+      <div class="slider">
+        <img src="img/pic-1.jpg" id="Slide">
+      </div>
+      <div class="slider-content">
+        <h2>Where can I find ideas for small rooms?</h2>
+        <hr>  
+        <p>Lorem ipsum dolor, sit amet <br> consectetur adipisicing elit. Voluptatem ut a, <br> veniam optio cumque fuga commodi ipsum</p>
+
+        <div class="controller">
+          <img src="img/back.png" id="BackBtn">
+          <div class="vertical-line"></div>
+          <img src="img/next.png" id="NextBtn">
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  var Slide = document.getElementById('Slide');
+  var BackBtn = document.getElementById('BackBtn');
+  var NextBtn = document.getElementById('NextBtn');
+
+  var slideimages = new Array(
+    "img/pic-1.jpg",
+    "img/pic-2.jpg",
+    "img/pic-3.jpg",
+    "img/pic-4.jpg",
+  );
+
+  let i = 0;
+  NextBtn.onclick = function(){
+    if(i < 3){
+      Slide.src = slideimages[i+1];
+      i++;
+    }
+  }
+
+  BackBtn.onclick = function(){
+    if(i > 0){
+      Slide.src = slideimages[i-1];
+      i--;
+    }
+  }
+    
+  
+
+</script>
+  
+</body>
+</html>
